@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математичний Паспорт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Математичний Паспорт</h1>
+        <p>Введіть ваше ім'я або фразу, щоб створити унікальний числовий ідентифікатор.</p>
+        <input type="text" id="inputName" placeholder="Ваше ім'я">
+        <button onclick="generatePassport()">Згенерувати</button>
+        
+        <div id="result"></div>
+        
+        <!-- Кнопка для відкриття модального вікна реєстрації -->
+        <button onclick="openRegisterModal()">Реєстрація</button>
+    </div>
+
+    <!-- Модальне вікно для реєстрації -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Реєстрація</h2>
+            <input type="text" id="username" placeholder="Ім'я користувача">
+            <input type="email" id="email" placeholder="Електронна пошта">
+            <input type="password" id="password" placeholder="Пароль">
+            <button onclick="registerUser()">Зареєструватися</button>
+            <div id="registrationResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
